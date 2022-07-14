@@ -4,7 +4,7 @@
 
 import 'package:flutter/widgets.dart';
 
-/// A tile in a material design grid list.
+/// A tile in a Material Design grid list.
 ///
 /// A grid list is a [GridView] of tiles in a vertical and horizontal
 /// array. Each tile typically contains some visually rich content (e.g., an
@@ -44,8 +44,9 @@ class GridTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (header == null && footer == null)
+    if (header == null && footer == null) {
       return child;
+    }
 
     return Stack(
       children: <Widget>[

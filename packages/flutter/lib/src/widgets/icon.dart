@@ -61,7 +61,7 @@ import 'icon_theme_data.dart';
 /// See also:
 ///
 ///  * [IconButton], for interactive icons.
-///  * [Icons], for the list of available icons for use with this class.
+///  * [Icons], the library of Material Icons available for use with this class.
 ///  * [IconTheme], which provides ambient configuration for icons.
 ///  * [ImageIcon], for showing icons from [AssetImage]s or other [ImageProvider]s.
 class Icon extends StatelessWidget {
@@ -181,8 +181,9 @@ class Icon extends StatelessWidget {
 
     final double iconOpacity = iconTheme.opacity ?? 1.0;
     Color iconColor = color ?? iconTheme.color!;
-    if (iconOpacity != 1.0)
+    if (iconOpacity != 1.0) {
       iconColor = iconColor.withOpacity(iconColor.opacity * iconOpacity);
+    }
 
     Widget iconWidget = RichText(
       overflow: TextOverflow.visible, // Never clip.

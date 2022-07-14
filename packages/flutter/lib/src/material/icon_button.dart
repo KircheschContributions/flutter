@@ -21,7 +21,7 @@ import 'tooltip.dart';
 // See: <https://material.io/design/usability/accessibility.html#layout-typography>.
 const double _kMinButtonSize = kMinInteractiveDimension;
 
-/// A material design icon button.
+/// A Material Design icon button.
 ///
 /// An icon button is a picture printed on a [Material] widget that reacts to
 /// touches by filling with color (ink).
@@ -94,7 +94,7 @@ const double _kMinButtonSize = kMinInteractiveDimension;
 ///
 /// See also:
 ///
-///  * [Icons], a library of predefined icons.
+///  * [Icons], the library of Material Icons.
 ///  * [BackButton], an icon button for a "back" affordance which adapts to the
 ///    current platform's conventions.
 ///  * [CloseButton], an icon button for closing pages.
@@ -306,10 +306,11 @@ class IconButton extends StatelessWidget {
     assert(debugCheckHasMaterial(context));
     final ThemeData theme = Theme.of(context);
     Color? currentColor;
-    if (onPressed != null)
+    if (onPressed != null) {
       currentColor = color;
-    else
+    } else {
       currentColor = disabledColor ?? theme.disabledColor;
+    }
 
     final VisualDensity effectiveVisualDensity = visualDensity ?? theme.visualDensity;
 
